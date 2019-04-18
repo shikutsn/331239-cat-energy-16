@@ -1,0 +1,29 @@
+.site-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.site-list__item {
+  text-align: center;
+  padding: 22px 0;
+  border-bottom: 1px solid @border-color;
+}
+
+.site-list__item-link {
+  font-family: "OswaldMedium", "Arial", sans-serif;
+  font-size: 20px;
+  line-height: 20px;
+  color: @caption-color;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
