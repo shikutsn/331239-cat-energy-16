@@ -41,73 +41,98 @@
       <section class="program">
         <h2 class="program__caption">Функциональное питание для котов</h2>
         <p class="program__tagline">Занялся собой? Займись котом!</p>
-        <img class="program__img" src="http://placehold.it/150x100" width="150" height="150" alt="Картинка Кэт энерджи со вкусом курицы">
+        <img class="program__img" src="img/index-can-mobile@1x.png" width="280" height="271" alt="Картинка Кэт энерджи со вкусом курицы">
         <a class="button program__choose" href="form.html">Подобрать программу</a>
       </section>
 
       <section class="types">
         <h2 class="visually-hidden">Типы программ</h2>
-        <div class="types-slim">
-          <h3 class="types-slim__caption">Похудение</h3>
-          <p class="types-slim__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-          <a class="types-slim__link" href="catalog-slim.html">Каталог slim</a>
-        </div>
-        <div class="types-pro">
-          <h3 class="types-pro__caption">Набор массы</h3>
-          <p class="types-pro__description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
-          <a class="types-pro__link" href="catalog-pro.html">Каталог pro</a>
-        </div>
+        <ul class="types__list">
+          <li class="types__item types__item--slim">
+            <h3 class="types__caption">Похудение</h3>
+            <p class="types__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
+            <a class="types__link" href="catalog-slim.html">Каталог slim</a>
+          </li>
+          <li class="types__item types__item--pro">
+            <h3 class="types__caption">Набор массы</h3>
+            <p class="types__description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
+            <a class="types__link" href="catalog-pro.html">Каталог pro</a>
+          </li>
+        </ul>
+
       </section>
 
       <section class="features">
         <h2 class="features__caption">Как это работает</h2>
         <ul class="features__list">
           <li class="features__item">
-            <p class="features__description">Функциональное питание содержит только полезные питательные вещества.</p>
+            <p class="features__description features__description--leaf">Функциональное питание содержит только полезные питательные вещества.</p>
           </li>
           <li class="features__item">
-            <p class="features__description">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</p>
+            <p class="features__description features__description--powder">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</p>
           </li>
           <li class="features__item">
-            <p class="features__description">Замените один-два приема обычной еды на наше функциональное питание.</p>
+            <p class="features__description features__description--dining">Замените один-два приема обычной еды на наше функциональное питание.</p>
           </li>
           <li class="features__item">
-            <p class="features__description">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
+            <p class="features__description features__description--clock">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
           </li>
         </ul>
       </section>
 
       <section class="proof">
-        <h2 class="proof__caption">Живой пример</h2>
-        <p class="proof__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день. </p>
-        <table class="proof__stats">
-          <tr>
-            <td class="proof__field">
-              Cнижение веса
-            </td>
-            <td class="proof__value">
-              5 кг
-            </td>
-          </tr>
-          <tr>
-            <td class="proof__field">
-              затрачено времени
-            </td>
-            <td class="proof__value">
-              60 дней
-            </td>
-          </tr>
-          <tr>
-            <td class="proof__field">
-              Затраты на питание:
-            </td>
-            <td class="proof__value">
-              15 000 руб.
-            </td>
-          </tr>
-        </table>
-        <img class="proof__picture" src="http://placehold.it/150x100" width="150" height="100" alt="Фотографии кота до и после диеты">
+        <div class="proof__main-wrapper">
+          <h2 class="proof__caption">Живой пример</h2>
+          <p class="proof__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день. </p>
+          <div class="proof__stats">
+            <span class="proof__value">5 кг
+              <span class="proof__field">cнижение веса</span>
+            </span>
+            <span class="proof__value">60 дней
+              <span class="proof__field">затрачено времени</span>
+            </span>
+          </div>
+          <p class="proof__costs">Затраты на питание: 15000 руб.</p>
+          <img class="proof__picture" src="http://placehold.it/150x100" width="150" height="100" alt="Фотографии кота до и после диеты">
+        </div>
       </section>
+
+      <section class="example">
+        <h2 class="example__header">Живой пример</h2>
+        <div class="example__wrapper-background">
+          <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy
+            Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по
+            16 часов в день.</p>
+          <div class="example__wrapper">
+            <ul class="example__list">
+              <li class="example__item">
+                <div class="example__item-border">
+                  <span class="example__item-result">5 кг</span>
+                  <span class="example__item-description">Снижение веса</span>
+                </div>
+              </li>
+              <li class="example__item">
+                <div class="example__item-border">
+                  <span class="example__item-result example__item-result--padding">60 дней</span>
+                  <span class="example__item-description example__item-description--padding">Затрачено времени</span>
+                </div>
+              </li>
+            </ul>
+            <div class="example__expenses">Затраты на питание: <span class="example__expenses-price">15 000 руб.</span></div>
+          </div>
+          <picture class="example__image">
+            <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png">
+            <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png">
+            <img src="img/before-mobile@1x.png" width="320" height="240" alt="Кот">
+          </picture>
+          <div class="example__result">
+            <span class="example__result-start">Было</span>
+            <span class="example__result-track"></span>
+            <span class="example__result-end">Стало</span>
+          </div>
+        </div>
+</section>
+
     </main>
 
     <footer class="page-footer">
