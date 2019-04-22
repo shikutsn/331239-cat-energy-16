@@ -84,66 +84,38 @@
         <div class="proof__main-wrapper">
           <h2 class="proof__caption">Живой пример</h2>
           <p class="proof__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день. </p>
-          <div class="proof__stats">
-            <span class="proof__value">5 кг
-              <span class="proof__field">cнижение веса</span>
-            </span>
-            <span class="proof__value">60 дней
-              <span class="proof__field">затрачено времени</span>
-            </span>
-          </div>
+          <ul class="proof__list">
+            <li class="proof__item">
+              <p class="proof__value">5 кг</p>
+              <p class="proof__field">снижение веса</p>
+            </li>
+            <li class="proof__item">
+              <p class="proof__value">60 дней</p>
+              <p class="proof__field">затрачено времени</p>
+            </li>
+          </ul>
           <p class="proof__costs">Затраты на питание: 15000 руб.</p>
-          <img class="proof__picture" src="http://placehold.it/150x100" width="150" height="100" alt="Фотографии кота до и после диеты">
+          <img class="proof__picture" src="img/before-mobile@1x.png" width="320" height="240" alt="Фотографии кота до и после диеты">
+          <div class="proof__controls">
+            <span class="proof__controls-before">Было</span>
+            <div class="proof__controls-slider"></div>
+            <span class="proof__controls-after">Стало</span>
+          </div>
         </div>
       </section>
-
-      <section class="example">
-        <h2 class="example__header">Живой пример</h2>
-        <div class="example__wrapper-background">
-          <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy
-            Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по
-            16 часов в день.</p>
-          <div class="example__wrapper">
-            <ul class="example__list">
-              <li class="example__item">
-                <div class="example__item-border">
-                  <span class="example__item-result">5 кг</span>
-                  <span class="example__item-description">Снижение веса</span>
-                </div>
-              </li>
-              <li class="example__item">
-                <div class="example__item-border">
-                  <span class="example__item-result example__item-result--padding">60 дней</span>
-                  <span class="example__item-description example__item-description--padding">Затрачено времени</span>
-                </div>
-              </li>
-            </ul>
-            <div class="example__expenses">Затраты на питание: <span class="example__expenses-price">15 000 руб.</span></div>
-          </div>
-          <picture class="example__image">
-            <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png">
-            <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png">
-            <img src="img/before-mobile@1x.png" width="320" height="240" alt="Кот">
-          </picture>
-          <div class="example__result">
-            <span class="example__result-start">Было</span>
-            <span class="example__result-track"></span>
-            <span class="example__result-end">Стало</span>
-          </div>
-        </div>
-</section>
 
     </main>
 
     <footer class="page-footer">
 
-      <div class="contacts">
+      <div class="page-footer__contacts">
         <h2 class="visually-hidden">Контакты</h2>
-        <p class="contacts__tagline">Приглашаем к сотрудничеству дилеров!</p>
-        <p class="contacts__text">ул. Большая Конюшенная, д. 19/8<br> Санкт-Петербург</p>
+        <p class="page-footer__contacts-tagline">Приглашаем к сотрудничеству дилеров!</p>
+        <p class="page-footer__contacts-text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
       </div>
 
-      <img class="contacts-map" src="http://placehold.it/150x100" width="150" height="100" alt="Карта с адресом">
+      <!-- <img class="contacts-map" src="http://placehold.it/150x100" width="150" height="100" alt="Карта с адресом"> -->
+      <iframe src="https://yandex.ru/map-widget/v1/-/CCRbFE1c" width="320" height="400" frameborder="0" allowfullscreen="true"></iframe>
 
       <a class="page-footer__logo">
         <img class="page-footer__logo-image" src="http://placehold.it/150x100" width="150" height="100" alt="Логотип Кэт энерджи">

@@ -29,21 +29,36 @@
   color: #444444;
 }
 
-.proof__stats {
+.proof__list {
   display: flex;
   flex-direction: row;
   flex-shrink: 0;
   justify-content: space-between;
+  width: 280px;
+  list-style: none;
+  margin: 0;
+  padding: 29px 20px 38px 0;
+}
+
+.proof__item {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  border: 1px solid #d9d9d9;
+  border-radius: 5px;
+  width: 124px;
+  box-sizing: border-box;
+  position: relative;
 }
 
 .proof__value {
-  box-sizing: border-box;
-  color: #444444;
+  color: #111111;
   display: block;
   width: 124px;
-  border: 1px solid #cdcdcd;
-  position: relative;
   padding: 15px 0;
+  margin: 0;
   font-family: @font-regular;
   font-style: 24px;
   line-height: 24px;
@@ -53,11 +68,8 @@
 
 .proof__field {
   content: "";
-  top: 40px;
-  left: 20px;
-  // box-sizing: border-box;
-  border-left: 20px solid #f2f2f2;
-  border-right: 20px solid #f2f2f2;
+  top: 35px;
+  left: 22px;
   position: absolute;
   color: #111111;
   font-family: "Arial", sans-serif;
@@ -66,7 +78,63 @@
   text-transform: lowercase;
   background-color: #f2f2f2;
   text-align: center;
-  width: 54px;
+  width: 80px;
+  display: block;
 }
 
+.proof__costs {
+  font-family: @font-regular;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-align: center;
+}
 
+.proof__picture {
+  padding-top: 45px;
+  padding-bottom: 40px;
+}
+
+.proof__controls {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 38px;
+  margin: 0 auto;
+  width: 200px;
+}
+
+.proof__controls-before {
+  font-family: @font-regular;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.proof__controls-after {
+  font-family: @font-regular;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.proof__controls-slider {
+  position: relative;
+  box-sizing: border-box;
+  width: 84px;
+  height: 14px;
+  margin-top: 3px;
+  background-color: #ffffff;
+  border: 1px solid #cdcdcd;
+  border-radius: 10px;
+}
+
+.proof__controls-slider::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 5px;
+  width: 35px;
+  height: 6px;
+  background-color: #68b738;
+  border-radius: 10px;
+}
