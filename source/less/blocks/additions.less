@@ -40,7 +40,6 @@
   width: @mobile-width - @mobile-side-paddings * 2;
   .set-font(@font-arial, 14px, 14px, 400);
   color: #444444;
-
 }
 
 .additions__item-value {
@@ -58,7 +57,8 @@
   background-repeat: no-repeat;
   min-height: 289px;
   position: relative;
-  &:before {
+
+  &::before {
     content: "";
     position: absolute;
     width: 56px;
