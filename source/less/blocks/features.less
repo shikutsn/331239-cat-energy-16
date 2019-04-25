@@ -8,19 +8,14 @@
 
 .features__caption {
   display: block;
-  font-family: @font-regular;
-  font-size: 36px;
-  line-height: 60px;
-
-  font-weight: normal;
+  .set-font(@font-regular, 36px, 60px, 400);
   margin-bottom: 26px;
   color: @caption-color;
 }
 
 .features__list {
   list-style: none;
-  margin: 0;
-  padding: 0;
+  .reset-margin-padding();
 }
 
 .features__item {
@@ -30,17 +25,12 @@
   padding-top: 3px;
   margin-bottom: 20px;
   color: #444444;
-  font-family: "Arial", sans-serif;
-  font-size: 14px;
-  font-weight: normal;
-  font-style: normal;
-  line-height: 18px;
+  .set-font(@font-arial, 14px, 18px, normal);
   padding-right: 30px;
 }
 
 .features__description {
-  margin: 0;
-  padding: 0;
+  .reset-margin-padding();
 
   &::before {
     content: "";

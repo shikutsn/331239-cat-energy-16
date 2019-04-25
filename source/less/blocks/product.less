@@ -1,0 +1,61 @@
+.product {
+  position: relative;
+}
+
+.product__info-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.product__caption-link {
+  text-decoration: none;
+}
+
+.product__caption {
+  .set-font(@font-regular, 16px, 20px, 400);
+  color: #111111;
+  text-transform: uppercase;
+  padding-right: 60px;
+}
+
+.product__caption--more {
+  .set-font(@font-regular, 16px, 20px, 400);
+  color: #111111;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 79px;
+  &::before {
+    position: absolute;
+    content: "";
+    background-image: url("../img/icon-plus-mobile.svg");
+    background-repeat: no-repeat;
+    top: -55px;
+    left: 50%;
+    margin-left: -15px;
+    width: 31px;
+    height: 31px;
+    opacity: 0.2;
+  }
+}
+
+.product__description--more {
+  .set-font(@font-arial, 12px, 16px, 400);
+  text-align: center;
+  margin-bottom: 22px;
+}
+
+.product__stats {
+  .set-font(@font-arial, 12px, 16px, 400);
+  width: 100%;
+  .reset-margin-padding();
+  border-collapse: collapse;
+}
+
+.product__value {
+  text-align: right;
+}
+
+.product__order-button {
+  margin-bottom: 25px;
+}
+

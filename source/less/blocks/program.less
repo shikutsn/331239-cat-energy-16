@@ -9,7 +9,6 @@
   &::before {
     content: "";
     position: absolute;
-    // display: block;
     z-index: -10;
     width: @mobile-width;
     height: image-height("../img/index-background-mobile@1x.jpg");
@@ -51,23 +50,16 @@
 }
 
 .program__caption {
-  margin: 0;
-  padding: 0;
-  font-family: @font-regular;
-  font-size: 36px;
-  line-height: 36px;
+  .reset-margin-padding();
+  .set-font(@font-regular, 36px, 36px, 400);
   color: #ffffff;
   text-align: center;
   margin-bottom: 24px;
-  font-weight: 400;
 }
 
 .program__tagline {
-  margin: 0;
-  padding: 0;
-  font-family: @font-regular;
-  font-size: 14px;
-  line-height: 14px;
+  .reset-margin-padding();
+  .set-font(@font-regular, 14px, 14px, 400);
   color: #ffffff;
   text-align: center;
   text-transform: uppercase;
@@ -75,12 +67,11 @@
 }
 
 .program__img {
-  margin: 0;
-  padding: 0;
+  .reset-margin-padding();
   margin-bottom: 3px;
 }
 
-.program__chose {
+.program__choose {
   font-size: 14px;
   line-height: 18px;
 }
