@@ -103,8 +103,6 @@ gulp.task("clean", function () {
   return del("build");
 });
 
-gulp.task("start", gulp.series("css", "server"));
-
 gulp.task("build", gulp.series(
   "clean",
   "copy",
@@ -112,3 +110,5 @@ gulp.task("build", gulp.series(
   "sprite",
   "html"
 ));
+
+gulp.task("start", gulp.series("css", "server"));
