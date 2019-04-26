@@ -38,40 +38,43 @@
 
       <section class="selection">
         <h1 class="selection__caption">Подбор программы</h1>
-        <p class="selection__hint">Заполните анкету и мы подберем программу питания для вашего кота</p>
+        <p class="selection__description">Заполните анкету и мы подберем программу питания для вашего кота</p>
+
         <form class="selection-form" action="https://echo.htmlacademy.ru" method="post">
 
-          <fieldset class="selection-form__general">
-            <p class="selection-form__item">
-              <label for="cat-name">Имя:*</label>
-              <input class="selection-form__input selection-form__input--name" type="text" id="cat-name" name="cat-name" value="" placeholder="Барсик">
-            </p>
-            <p class="selection-form__item">
-              <label for="cat-weight">Вес (кг):*</label>
-              <input class="selection-form__input selection-form__input--weight" type="text" id="cat-weight" name="cat-weight" value="" placeholder="7">
-            </p>
-            <p class="selection-form__item">
-              <label for="cat-age">Возраст (лет):</label>
-              <input class="selection-form__input selection-form__input--age" type="text" id="cat-age" name="cat-age" value="" placeholder="7">
-            </p>
-          </fieldset>
+          <div class="selection-form__general-wrapper">
+            <fieldset class="selection-form__general">
+              <p class="selection-form__item">
+                <label for="cat-name">Имя:*</label>
+                <input class="selection-form__input selection-form__input--name" type="text" id="cat-name" name="cat-name" value="" placeholder="Барсик">
+              </p>
+              <p class="selection-form__item">
+                <label for="cat-weight">Вес (кг):*</label>
+                <input class="selection-form__input selection-form__input--weight" type="text" id="cat-weight" name="cat-weight" value="" placeholder="7">
+              </p>
+              <p class="selection-form__item">
+                <label for="cat-age">Возраст (лет):</label>
+                <input class="selection-form__input selection-form__input--age" type="text" id="cat-age" name="cat-age" value="" placeholder="7">
+              </p>
+            </fieldset>
 
-          <fieldset class="selection-form__purpose">
-            <ul class="selection-form__purpose-list">
-              <li class="selection-form__purpose-item">
-                <input class="visually-hidden selection-form__radio" type="radio" id="weight-loss" name="purpose" value="weight-loss" checked>
-                <label for="weight-loss">Похудение</label>
-              </li>
-              <li class="selection-form__purpose-item">
-                <input class="visually-hidden selection-form__radio" type="radio" id="weight-gain" name="purpose" value="weight-gain">
-                <label for="weight-gain">Набор массы</label>
-              </li>
-              <li class="selection-form__purpose-item">
-                <input class="visually-hidden selection-form__radio" type="radio" id="not-sure" name="purpose" value="not-sure">
-                <label for="not-sure">Не знаю (нужен ваш совет)</label>
-              </li>
-            </ul>
-          </fieldset>
+            <fieldset class="selection-form__purpose">
+              <ul class="selection-form__purpose-list">
+                <li class="selection-form__purpose-item">
+                  <input class="visually-hidden selection-form__radio" type="radio" id="weight-loss" name="purpose" value="weight-loss" checked>
+                  <label for="weight-loss">Похудение</label>
+                </li>
+                <li class="selection-form__purpose-item">
+                  <input class="visually-hidden selection-form__radio" type="radio" id="weight-gain" name="purpose" value="weight-gain">
+                  <label for="weight-gain">Набор массы</label>
+                </li>
+                <li class="selection-form__purpose-item">
+                  <input class="visually-hidden selection-form__radio" type="radio" id="not-sure" name="purpose" value="not-sure">
+                  <label for="not-sure">Не знаю (нужен ваш совет)</label>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
 
           <fieldset class="selection-form__contacts">
             <legend class="selection-form__contacts-caption">Контактные данные (владельца кота)</legend>
