@@ -1,0 +1,26 @@
+.site-list {
+  list-style: none;
+  .reset-margin-padding();
+}
+
+.site-list__item {
+  text-align: center;
+  padding: 22px 0;
+  border-bottom: 1px solid @border-color;
+}
+
+.site-list__item-link {
+  .set-font(@font-medium, 20px, 20px, 500);
+  color: @caption-color;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}

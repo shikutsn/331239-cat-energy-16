@@ -1,0 +1,26 @@
+.selection {
+  width: @mobile-width;
+  box-sizing: border-box;
+  .reset-margin-padding();
+  // padding-left: @mobile-side-paddings;
+  margin: 0 auto;
+  .set-font(@font-regular, 16px, 18px, 400);
+  text-transform: uppercase;
+}
+
+.selection__caption {
+  .set-font(@font-regular, 36px, 36px, 400);
+  color: #111111;
+  .reset-margin-padding();
+  margin: 30px 0;
+  text-transform: none;
+  padding-left: @mobile-side-paddings;
+}
+
+.selection__description {
+  .set-font(@font-regular, 14px, 18px, 400);
+  color: #111111;
+  // text-transform: uppercase;
+  margin: 0 30px 30px 0;
+  padding-left: @mobile-side-paddings;
+}

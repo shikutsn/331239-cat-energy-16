@@ -3,261 +3,345 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body>
 
+    <div style="display:none">
+      <include src="build/img/sprite.svg"></include>
+    </div>
+
     <header class="page-header">
 
-      <a class="page-header__logo" href="index.html">
-        <img class="page-header__logo-image" src="http://placehold.it/150x100" width="150" height="100" alt="Логотип Кэт энерджи">
-      </a>
+      <div class="page-header__logo-wrapper">
+        <a class="page-header__logo" href="index.html">
+          <img class="page-header__logo-image" src="img/logo-mobile.svg" width="191" height="39" alt="Логотип Кэт энерджи">
+        </a>
+      </div>
 
-      <nav class="main-nav">
+      <nav class="main-nav main-nav--opened main-nav--nojs">
         <button class="main-nav__toggle" type="button">Открыть меню</button>
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list site-list">
-            <li class="site-list__item">
-              <a href="index.html">Главная</a>
-            </li>
-            <li class="site-list__item site-list__item--active">
-              <a>Каталог продукции</a>
-            </li>
-            <li class="site-list__item">
-              <a href="form.html">Подбор программы</a>
-            </li>
-          </ul>
-        </div>
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item">
+            <a class="site-list__item-link" href="index.html">Главная</a>
+          </li>
+          <li class="site-list__item site-list__item--active">
+            <a class="site-list__item-link">Каталог продукции</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__item-link" href="form.html">Подбор программы</a>
+          </li>
+        </ul>
       </nav>
 
     </header>
 
-    <main class="page-main">
+    <main class="page-catalog">
 
-      <h1 class="page-main__caption">Каталог продукции</h1>
+      <h1 class="page-catalog__caption">Каталог продукции</h1>
 
       <section class="catalog">
         <ul class="catalog-list">
           <!-- курица 500г -->
           <li class="catalog-list__item product">
-            <img class="product__image" src="http://placehold.it/150x100" width="150" height="100" alt="Изображение Кэт энерджи pro со вкусом курицы">
-            <div class="product__description">
-              <h2 class="product__caption">
-                <a href="#">Cat Energy pro 500 г</a>
-              </h2>
-              <table class="product__stats">
-                <tr>
-                  <td class="product__field">Объем</td>
-                  <td class="product__value">500 г</td>
-                </tr>
-                <tr>
-                  <td class="product__field">Вкус</td>
-                  <td class="product__value">Курица</td>
-                </tr>
-                <tr>
-                  <td class="product__field">Цена</td>
-                  <td class="product__value">700 Р.</td>
-                </tr>
-              </table>
+            <div class="product__info-wrapper">
+              <div class="product__image-wrapper">
+                <a href="cat-energy-chicken-small.html">
+                  <img class="product__image" src="img/chicken-small-mobile@1x.jpg" width="140" height="144" alt="Изображение Кэт энерджи pro со вкусом курицы">
+                </a>
+              </div>
+              <div class="product__description">
+                <a class="product__caption-link" href="#">
+                  <h2 class="product__caption">
+                    Cat Energy pro 500 г
+                  </h2>
+                </a>
+                <table class="product__stats">
+                  <tr>
+                    <td class="product__field">Объем</td>
+                    <td class="product__value">500 г</td>
+                  </tr>
+                  <tr>
+                    <td class="product__field">Вкус</td>
+                    <td class="product__value">Курица</td>
+                  </tr>
+                  <tr>
+                    <td class="product__field">Цена</td>
+                    <td class="product__value">700 Р.</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <div class="product__order-wrapper">
               <a class="button product__order-button">Заказать</a>
             </div>
           </li>
           <!-- курица 1000г -->
           <li class="catalog-list__item product">
-            <img class="product__image" src="http://placehold.it/150x100" width="150" height="100" alt="Изображение Кэт энерджи pro со вкусом курицы">
-            <div class="product__description">
-              <h2 class="product__caption">
-                <a href="#">Cat Energy pro 1000 г</a>
-              </h2>
-              <table class="product__stats">
-                <tr>
-                  <td class="product__field">Объем</td>
-                  <td class="product__value">1000 г</td>
-                </tr>
-                <tr>
-                  <td class="product__field">Вкус</td>
-                  <td class="product__value">Курица</td>
-                </tr>
-                <tr>
-                  <td class="product__field">Цена</td>
-                  <td class="product__value">1000 Р.</td>
-                </tr>
-              </table>
+            <div class="product__info-wrapper">
+              <div class="product__image-wrapper">
+                <a href="cat-energy-chicken-big.html">
+                  <img class="product__image" src="img/chicken-big-mobile@1x.jpg" width="140" height="144" alt="Изображение Кэт энерджи pro со вкусом курицы">
+                </a>
+              </div>
+              <div class="product__description">
+                <a class="product__caption-link" href="cat-energy-chicken-big.html">
+                  <h2 class="product__caption">
+                    Cat Energy pro 1000 г
+                  </h2>
+                </a>
+                <table class="product__stats">
+                  <tr>
+                    <td class="product__field">Объем</td>
+                    <td class="product__value">1000 г</td>
+                  </tr>
+                  <tr>
+                    <td class="product__field">Вкус</td>
+                    <td class="product__value">Курица</td>
+                  </tr>
+                  <tr>
+                    <td class="product__field">Цена</td>
+                    <td class="product__value">1000 Р.</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <div class="product__order-wrapper">
               <a class="button product__order-button">Заказать</a>
             </div>
           </li>
           <!-- рыба 500г -->
           <li class="catalog-list__item product">
-            <img class="product__image" src="http://placehold.it/150x100" width="150" height="100" alt="Изображение Кэт энерджи pro со вкусом рыбы">
-            <div class="product__description">
-              <h2 class="product__caption">
-                <a href="#">Cat Energy pro 500 г</a>
-              </h2>
-              <table class="product__stats">
-                <tr>
-                  <td class="product__field">Объем</td>
-                  <td class="product__value">500 г</td>
-                </tr>
-                <tr>
-                  <td class="product__field">Вкус</td>
-                  <td class="product__value">Рыба</td>
-                </tr>
-                <tr>
-                  <td class="product__field">Цена</td>
-                  <td class="product__value">700 Р.</td>
-                </tr>
-              </table>
+            <div class="product__info-wrapper">
+              <div class="product__image-wrapper">
+                <a href="cat-energy-fish-small.html">
+                  <img class="product__image" src="img/fish-small-mobile@1x.jpg" width="140" height="144" alt="Изображение Кэт энерджи pro со вкусом рыбы">
+                </a>
+              </div>
+              <div class="product__description">
+                <a class="product__caption-link" href="cat-energy-fish-small.html">
+                  <h2 class="product__caption">
+                    Cat Energy pro 500 г
+                  </h2>
+                </a>
+                <table class="product__stats">
+                  <tr>
+                    <td class="product__field">Объем</td>
+                    <td class="product__value">500 г</td>
+                  </tr>
+                  <tr>
+                    <td class="product__field">Вкус</td>
+                    <td class="product__value">Рыба</td>
+                  </tr>
+                  <tr>
+                    <td class="product__field">Цена</td>
+                    <td class="product__value">700 Р.</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <div class="product__order-wrapper">
               <a class="button product__order-button">Заказать</a>
             </div>
           </li>
           <!-- рыба 1000г -->
           <li class="catalog-list__item product">
-            <img class="product__image" src="http://placehold.it/150x100" width="150" height="100" alt="Изображение Кэт энерджи pro со вкусом рыбы">
-            <div class="product__description">
-              <h2 class="product__caption">
-                <a href="#">Cat Energy pro 1000 г</a>
-              </h2>
-              <table class="product__stats">
-                <tr>
-                  <td class="product__field">Объем</td>
-                  <td class="product__value">1000 г</td>
-                </tr>
-                <tr>
-                  <td class="product__field">Вкус</td>
-                  <td class="product__value">Рыба</td>
-                </tr>
-                <tr>
-                  <td class="product__field">Цена</td>
-                  <td class="product__value">1000 Р.</td>
-                </tr>
-              </table>
+            <div class="product__info-wrapper">
+              <div class="product__image-wrapper">
+                <a href="cat-energy-fish-big.html">
+                  <img class="product__image" src="img/fish-big-mobile@1x.jpg" width="140" height="144" alt="Изображение Кэт энерджи pro со вкусом рыбы">
+                </a>
+              </div>
+              <div class="product__description">
+                <a class="product__caption-link" href="cat-energy-fish-big.html">
+                  <h2 class="product__caption">
+                    Cat Energy pro 1000 г
+                  </h2>
+                </a>
+                <table class="product__stats">
+                  <tr>
+                    <td class="product__field">Объем</td>
+                    <td class="product__value">1000 г</td>
+                  </tr>
+                  <tr>
+                    <td class="product__field">Вкус</td>
+                    <td class="product__value">Рыба</td>
+                  </tr>
+                  <tr>
+                    <td class="product__field">Цена</td>
+                    <td class="product__value">1000 Р.</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <div class="product__order-wrapper">
               <a class="button product__order-button">Заказать</a>
             </div>
           </li>
           <!-- гречка 500г -->
           <li class="catalog-list__item product">
-            <img class="product__image" src="http://placehold.it/150x100" width="150" height="100" alt="Изображение Кэт энерджи slim со вкусом гречки">
-            <div class="product__description">
-              <h2 class="product__caption">
-                <a href="#">Cat Energy slim 500 г</a>
-              </h2>
-              <table class="product__stats">
-                <tr>
-                  <td class="product__field">Объем</td>
-                  <td class="product__value">500 г</td>
-                </tr>
-                <tr>
-                  <td class="product__field">Вкус</td>
-                  <td class="product__value">Гречка</td>
-                </tr>
-                <tr>
-                  <td class="product__field">Цена</td>
-                  <td class="product__value">400 Р.</td>
-                </tr>
-              </table>
+            <div class="product__info-wrapper">
+              <div class="product__image-wrapper">
+                <a href="cat-energy-buckwheat-small.html">
+                  <img class="product__image" src="img/buckwheat-small-mobile@1x.jpg" width="140" height="144" alt="Изображение Кэт энерджи slim со вкусом гречки">
+                </a>
+              </div>
+              <div class="product__description">
+                <a class="product__caption-link" href="cat-energy-buckwheat-small.html">
+                  <h2 class="product__caption">
+                    Cat Energy slim 500 г
+                  </h2>
+                </a>
+                <table class="product__stats">
+                  <tr>
+                    <td class="product__field">Объем</td>
+                    <td class="product__value">500 г</td>
+                  </tr>
+                  <tr>
+                    <td class="product__field">Вкус</td>
+                    <td class="product__value">Гречка</td>
+                  </tr>
+                  <tr>
+                    <td class="product__field">Цена</td>
+                    <td class="product__value">400 Р.</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <div class="product__order-wrapper">
               <a class="button product__order-button">Заказать</a>
             </div>
           </li>
           <!-- гречка 1000г -->
           <li class="catalog-list__item product">
-            <img class="product__image" src="http://placehold.it/150x100" width="150" height="100" alt="Изображение Кэт энерджи slim со вкусом гречки">
-            <div class="product__description">
-              <h2 class="product__caption">
-                <a href="#">Cat Energy slim 1000 г</a>
-              </h2>
-              <table class="product__stats">
-                <tr>
-                  <td class="product__field">Объем</td>
-                  <td class="product__value">1000 г</td>
-                </tr>
-                <tr>
-                  <td class="product__field">Вкус</td>
-                  <td class="product__value">Гречка</td>
-                </tr>
-                <tr>
-                  <td class="product__field">Цена</td>
-                  <td class="product__value">700 Р.</td>
-                </tr>
-              </table>
+            <div class="product__info-wrapper">
+              <div class="product__image-wrapper">
+                <a href="cat-energy-buckwheat-big.html">
+                  <img class="product__image" src="img/buckwheat-big-mobile@1x.jpg" width="140" height="144" alt="Изображение Кэт энерджи slim со вкусом гречки">
+                </a>
+              </div>
+              <div class="product__description">
+                <a class="product__caption-link" href="cat-energy-buckwheat-big.html">
+                  <h2 class="product__caption">
+                    Cat Energy slim 1000 г
+                  </h2>
+                </a>
+                <table class="product__stats">
+                  <tr>
+                    <td class="product__field">Объем</td>
+                    <td class="product__value">1000 г</td>
+                  </tr>
+                  <tr>
+                    <td class="product__field">Вкус</td>
+                    <td class="product__value">Гречка</td>
+                  </tr>
+                  <tr>
+                    <td class="product__field">Цена</td>
+                    <td class="product__value">700 Р.</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <div class="product__order-wrapper">
               <a class="button product__order-button">Заказать</a>
             </div>
           </li>
           <!-- рис 500г -->
           <li class="catalog-list__item product">
-            <img class="product__image" src="http://placehold.it/150x100" width="150" height="100" alt="Изображение Кэт энерджи slim со вкусом риса">
-            <div class="product__description">
-              <h2 class="product__caption">
-                <a href="#">Cat Energy slim 500 г</a>
-              </h2>
-              <table class="product__stats">
-                <tr>
-                  <td class="product__field">Объем</td>
-                  <td class="product__value">500 г</td>
-                </tr>
-                <tr>
-                  <td class="product__field">Вкус</td>
-                  <td class="product__value">Рис</td>
-                </tr>
-                <tr>
-                  <td class="product__field">Цена</td>
-                  <td class="product__value">500 Р.</td>
-                </tr>
-              </table>
+            <div class="product__info-wrapper">
+              <div class="product__image-wrapper">
+                <a href="cat-energy-rice-small.html">
+                  <img class="product__image" src="img/rice-small-mobile@1x.jpg" width="140" height="144" alt="Изображение Кэт энерджи slim со вкусом риса">
+                </a>
+              </div>
+              <div class="product__description">
+                <a class="product__caption-link" href="cat-energy-rice-small.html">
+                  <h2 class="product__caption">
+                    Cat Energy slim 500 г
+                  </h2>
+                </a>
+                <table class="product__stats">
+                  <tr>
+                    <td class="product__field">Объем</td>
+                    <td class="product__value">500 г</td>
+                  </tr>
+                  <tr>
+                    <td class="product__field">Вкус</td>
+                    <td class="product__value">Рис</td>
+                  </tr>
+                  <tr>
+                    <td class="product__field">Цена</td>
+                    <td class="product__value">500 Р.</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <div class="product__order-wrapper">
               <a class="button product__order-button">Заказать</a>
             </div>
           </li>
           <!-- еще -->
-          <li class="catalog-list__item show-more">
-            <p class="show-more__caption">Показать еще 100500 товаров</p>
-            <p class="show-more__description">На самом деле вкусов гораздо больше!</p>
-            <a class="button show-more__show-all">Показать все</a>
+          <li class="catalog-list__item product">
+            <p class="product__caption--more">Показать еще 100500 товаров</p>
+            <p class="product__description--more">На самом деле вкусов гораздо больше!</p>
+            <a class="button button--gray product__order-button">Показать все</a>
           </li>
-
         </ul>
       </section>
 
       <section class="additions">
         <h2 class="additions__caption">Дополнительные товары</h2>
 
-        <ul class="additions-list">
-          <li class="additions-item">
-            <h3 class="additions-item__caption">Сахарозаменитель</h3>
-              <table class="additions-item__stats">
-                <tr>
-                  <td class="additions-item__field">1 упаковка (100 г)</td>
-                  <td class="additions-item__value">200 Р.</td>
-                </tr>
-              </table>
-              <a class="button additions-item__button" href="#">Заказать</a>
+        <ul class="additions__list">
+          <li class="additions__item">
+            <div class="additions__item-wrapper">
+              <h3 class="additions__item-caption">Сахарозаменитель</h3>
+                <table class="additions__item-stats">
+                  <tr>
+                    <td class="additions__item-field">1 упаковка (100 г)</td>
+                    <td class="additions__item-value">200 Р.</td>
+                  </tr>
+                </table>
+            </div>
+              <a class="button additions__item-order" href="#">Заказать</a>
           </li>
-          <li class="additions-item">
-            <h3 class="additions-item__caption">Питьевая вода</h3>
-              <table class="additions-item__stats">
-                <tr>
-                  <td class="additions-item__field">5 литров</td>
-                  <td class="additions-item__value">50 Р.</td>
-                </tr>
-              </table>
-              <a class="button additions-item__button" href="#">Заказать</a>
+          <li class="additions__item">
+            <div class="additions__item-wrapper">
+              <h3 class="additions__item-caption">Питьевая вода</h3>
+                <table class="additions__item-stats">
+                  <tr>
+                    <td class="additions__item-field">5 литров</td>
+                    <td class="additions__item-value">50 Р.</td>
+                  </tr>
+                </table>
+            </div>
+              <a class="button additions__item-order" href="#">Заказать</a>
           </li>
-          <li class="additions-item">
-            <h3 class="additions-item__caption">Молоко</h3>
-              <table class="additions-item__stats">
-                <tr>
-                  <td class="additions-item__field">1 литр</td>
-                  <td class="additions-item__value">100 Р.</td>
-                </tr>
-              </table>
-              <a class="button additions-item__button" href="#">Заказать</a>
+          <li class="additions__item">
+            <div class="additions__item-wrapper">
+              <h3 class="additions__item-caption">Молоко</h3>
+                <table class="additions__item-stats">
+                  <tr>
+                    <td class="additions__item-field">1 литр</td>
+                    <td class="additions__item-value">100 Р.</td>
+                  </tr>
+                </table>
+            </div>
+              <a class="button additions__item-order" href="#">Заказать</a>
           </li>
-          <li class="additions-item">
-            <h3 class="additions-item__caption">Витамины</h3>
-              <table class="additions-item__stats">
-                <tr>
-                  <td class="additions-item__field">1 упаковка (30 г)</td>
-                  <td class="additions-item__value">300 Р.</td>
-                </tr>
-              </table>
-              <a class="button additions-item__button" href="#">Заказать</a>
+          <li class="additions__item">
+            <div class="additions__item-wrapper">
+              <h3 class="additions__item-caption">Витамины</h3>
+                <table class="additions__item-stats">
+                  <tr>
+                    <td class="additions__item-field">1 упаковка (30 г)</td>
+                    <td class="additions__item-value">300 Р.</td>
+                  </tr>
+                </table>
+            </div>
+              <a class="button additions__item-order" href="#">Заказать</a>
           </li>
         </ul>
         <div class="additions__bonus">
@@ -269,46 +353,62 @@
 
     <footer class="page-footer">
 
-      <div class="contacts">
-        <h2 class="visually-hidden">Контакты</h2>
-        <p class="contacts__tagline">Приглашаем к сотрудничеству дилеров!</p>
-        <p class="contacts__text">ул. Большая Конюшенная, д. 19/8<br> Санкт-Петербург</p>
+      <div class="page-footer__contacts-wrapper--index">
+        <div class="page-footer__contacts">
+          <h2 class="visually-hidden">Контакты</h2>
+          <p class="page-footer__contacts-tagline">Приглашаем к сотрудничеству дилеров!</p>
+          <p class="page-footer__contacts-text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+        </div>
       </div>
 
-      <img class="contacts-map" src="http://placehold.it/150x100" width="150" height="100" alt="Карта с адресом">
+      <div class="page-footer__map-wrapper">
+        <iframe class="page-footer__map-iframe" src="https://yandex.ru/map-widget/v1/-/CCRbFE1c" width="320" height="400"></iframe>
+        <img class="page-footer__map-img" src="img/bg-map-mobile@1x.png" width="320" height="400" alt="Карта местонахождения Cat Energy">
+      </div>
 
-      <a class="page-footer__logo">
-        <img class="page-footer__logo-image" src="http://placehold.it/150x100" width="150" height="100" alt="Логотип Кэт энерджи">
-      </a>
+      <div class="page-footer__logo-wrapper">
+        <a class="page-footer__logo-link">
+          <img class="page-footer__logo-image" src="img/logo-footer.svg" width="127" height="23" alt="Логотип Кэт энерджи">
+        </a>
+      </div>
 
-      <div class="page-footer__social social">
+      <div class="page-footer__social-wrapper social">
         <ul class="social__list">
           <li class="social__item">
             <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
-              <p class="visually-hidden">Кэт энерджи во Вконтакте</p>
+              <svg class="social__icon-vkontakte" role="img" width="30" height="16" aria-labelledby="Кэт энерджи во Вконтакте">
+                <use xlink:href="#icon-vk-mobile"></use>
+              </svg>
             </a>
           </li>
           <li class="social__item">
             <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">
-              <p class="visually-hidden">Кэт энерджи в Инстаграме</p>
+              <svg class="social__icon-instagram" role="img" width="23" height="23" aria-labelledby="Кэт энерджи в Инстаграме">
+                <use xlink:href="#icon-insta-mobile"></use>
+              </svg>
             </a>
           </li>
           <li class="social__item">
             <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">
-              <p class="visually-hidden">Кэт энерджи на Фейсбуке</p>
+              <svg class="social__icon-facebook" role="img" width="14" height="28" aria-labelledby="Кэт энерджи на Фейсбуке">
+                <use xlink:href="#icon-fb-mobile"></use>
+              </svg>
             </a>
           </li>
         </ul>
       </div>
 
-      <div class="page-footer__copyright copyright">
+      <div class="page-footer__copyright-wrapper copyright">
         <p class="copyright__text">HTML Academy</p>
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-          <img class="copyright__logo-image" src="http://placehold.it/150x100" width="150" height="100" alt="Логотип HTML Academy">
+          <svg class="copyright__logo-image" role="img" width="27" height="34" aria-labelledby="Логотип HTML Academy">
+            <use xlink:href="#icon-htmlacademy"></use>
+          </svg>
         </a>
       </div>
 
     </footer>
 
+  <script src="js/main-nav.js"></script>
   </body>
 </html>
