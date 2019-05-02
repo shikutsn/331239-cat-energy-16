@@ -17,7 +17,7 @@ var include = require("posthtml-include");
 var del = require("del");
 var cheerio = require("gulp-cheerio");
 
-
+// добавить минификацию html и js
 
 
 

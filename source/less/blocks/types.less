@@ -13,7 +13,7 @@
 .types__item {
   position: relative;
   background-color: #f2f2f2;
-  padding: 39px 20px 22px 21px;
+  padding: 30px 20px 17px;
   margin-bottom: 20px;
 
   &::before {
@@ -22,7 +22,7 @@
     width: 50px;
     height: 50px;
     left: 22px;
-    top: 24px;
+    top: 25px;
     box-sizing: border-box;
     border: 25px solid #68b738;
     border-radius: 50%;
@@ -61,14 +61,14 @@
   text-transform: uppercase;
   color: @caption-color;
   padding-left: 72px;
-  margin-bottom: 30px;
+  margin-bottom: 29px;
 }
 
 .types__description {
   .reset-margin-padding();
   .set-font(@font-arial, 14px, 18px, 400);
   padding-bottom: 23px;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
   border-bottom: 1px solid #f2f2f2;
   padding-right: 10px;
 }
@@ -111,7 +111,7 @@
   }
 
   .types__item {
-    padding: 80px 60px 61px 52px;
+    padding: 75px 60px 57px 52px;
     margin-bottom: 30px;
 
     &::before {
@@ -128,8 +128,8 @@
         width: 141px;
         height: 194px;
         left: auto;
-        right: 92px;
-        top: 80px;
+        right: 91px;
+        top: 79px;
       }
     }
 
@@ -153,13 +153,22 @@
   .types__description {
     .set-font(@font-arial, 16px, 24px, 400);
     padding-bottom: 0;
-    margin-bottom: 60px;
+    margin-bottom: 55px;
     border: none;
     padding-right: 220px;
   }
 
+  .types__item--pro .types__description {
+    padding-right: 255px;
+  }
+
   .types__link {
     .set-font(@font-regular, 20px, 20px, 400);
+
+    &::after {
+      top: 4px;
+      right: -48px;
+    }
   }
 }
 
@@ -167,6 +176,7 @@
   .types {
     width: @desktop-width;
     padding: 0 @desktop-side-paddings;
+    margin-bottom: 70px;
   }
 
   .types__list {
@@ -177,9 +187,8 @@
 
   .types__item {
     box-sizing: border-box;
-    padding: 80px 55px 60px 50px;
+    padding: 74px 55px 60px 52px;
     margin-bottom: 0;
-    // margin-right: 80px;
     width: 570px;
 
     &::before {
@@ -213,13 +222,17 @@
   }
 
   .types__caption {
-    padding-left: 150px;
+    padding-left: 162px;
     margin-bottom: 75px;
   }
 
   .types__description {
-    margin-bottom: 35px;
-    padding-right: 55px;
+    margin-bottom: 28px;
+    padding-right: 0px;
+  }
+
+  .types__item--pro .types__description {
+    padding-right: 0;
   }
 
   .types__link {

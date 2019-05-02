@@ -5,6 +5,8 @@
     <title>HTML Academy: Кэт энерджи</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="format-detection" content="telephone=no">
+    <link rel="preload" href="fonts/oswaldregular.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" crossorigin="anonymous">
     <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body>
@@ -16,11 +18,11 @@
     <header class="page-header">
 
       <div class="page-header__logo-wrapper">
-        <a class="page-header__logo">
+        <a class="page-header__logo" href="index.html">
           <picture>
             <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
             <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-            <img src="img/logo-mobile.svg" width="191" height="39" alt="Логотип Кэт энерджи">
+            <img class="page-header__logo-img" src="img/logo-mobile.svg" width="191" height="39" alt="Логотип Кэт энерджи">
           </picture>
         </a>
       </div>
@@ -359,55 +361,70 @@
       <div class="page-footer__contacts-wrapper-nonindex">
         <div class="page-footer__contacts">
           <h2 class="visually-hidden">Контакты</h2>
-          <p class="page-footer__contacts-tagline">Приглашаем к сотрудничеству дилеров!</p>
-          <p class="page-footer__contacts-text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+          <p class="page-footer__contacts-tagline">
+            <span>Приглашаем</span>
+            <span>к сотрудничеству дилеров!</span>
+          </p>
+          <p class="page-footer__contacts-text">
+            <span>ул. Большая Конюшенная, д. 19/8</span>
+            <span>Санкт-Петербург</span>
+          </p>
         </div>
       </div>
 
       <div class="page-footer__map-wrapper">
         <iframe class="page-footer__map-iframe" src="https://yandex.ru/map-widget/v1/-/CCRbFE1c" width="320" height="400"></iframe>
-        <img class="page-footer__map-img" src="img/bg-map-mobile@1x.png" width="320" height="400" alt="Карта местонахождения Cat Energy">
+        <picture>
+          <source type="image/webp" media="(min-width: 1300px)" srcset="img/webp/bg-map-desktop@1x.webp 1x, img/webp/bg-map-desktop@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/bg-map-tablet@1x.webp 1x, img/webp/bg-map-tablet@2x.webp 2x">
+          <source type="image/webp" srcset="img/webp/bg-map-mobile@1x.webp 1x, img/webp/bg-map-mobile@2x.webp 2x">
+          <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.png 1x, img/bg-map-desktop@2x.png 2x">
+          <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png 1x, img/bg-map-tablet@2x.png 2x">
+          <img class="page-footer__map-img" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x" width="320" height="400" alt="Карта местонахождения Cat Energy">
+        </picture>
       </div>
 
-      <div class="page-footer__logo-wrapper">
-        <a class="page-footer__logo-link">
-          <img class="page-footer__logo-image" src="img/logo-footer.svg" width="127" height="23" alt="Логотип Кэт энерджи">
-        </a>
-      </div>
+      <div class="page-footer__menu-wrapper">
+        <div class="page-footer__logo-wrapper">
+          <a class="page-footer__logo-link">
+            <img class="page-footer__logo-image" src="img/logo-footer.svg" width="127" height="23" alt="Логотип Кэт энерджи">
+          </a>
+        </div>
 
-      <div class="page-footer__social-wrapper social">
-        <ul class="social__list">
-          <li class="social__item">
-            <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
-              <svg class="social__icon-vkontakte" role="img" width="30" height="16" aria-label="Кэт энерджи во Вконтакте">
-                <use xlink:href="#icon-vk-mobile"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">
-              <svg class="social__icon-instagram" role="img" width="23" height="23" aria-label="Кэт энерджи в Инстаграме">
-                <use xlink:href="#icon-insta-mobile"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">
-              <svg class="social__icon-facebook" role="img" width="14" height="28" aria-label="Кэт энерджи на Фейсбуке">
-                <use xlink:href="#icon-fb-mobile"></use>
-              </svg>
-            </a>
-          </li>
-        </ul>
-      </div>
+        <div class="page-footer__social-wrapper social">
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
+                <svg class="social__icon-vkontakte" role="img" width="22" height="12" aria-label="Кэт энерджи во Вконтакте">
+                  <use xlink:href="#icon-vk-mobile"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">
+                <svg class="social__icon-instagram" role="img" width="17" height="17" aria-label="Кэт энерджи в Инстаграме">
+                  <use xlink:href="#icon-insta-mobile"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">
+                <svg class="social__icon-facebook" role="img" width="10" height="19" aria-label="Кэт энерджи на Фейсбуке">
+                  <use xlink:href="#icon-fb-mobile"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
 
-      <div class="page-footer__copyright-wrapper copyright">
-        <p class="copyright__text">HTML Academy</p>
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-          <svg class="copyright__logo-image" role="img" width="27" height="34" aria-label="Логотип HTML Academy">
-            <use xlink:href="#icon-htmlacademy"></use>
-          </svg>
-        </a>
+        <div class="page-footer__copyright-wrapper copyright">
+          <p class="copyright__text">HTML Academy</p>
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+            <svg class="copyright__logo-image" role="img" width="27" height="34" aria-label="Логотип HTML Academy">
+              <use xlink:href="#icon-htmlacademy"></use>
+            </svg>
+          </a>
+        </div>
       </div>
 
     </footer>
