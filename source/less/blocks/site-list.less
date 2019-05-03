@@ -48,8 +48,7 @@
 
   .site-list__item-link {
     .set-font(@font-medium, 17px, 25px, 400);
-    color: #222222;
-    // letter-spacing: -1px;
+    color: #111111;
   }
 
   .site-list__item--active .site-list__item-link {
@@ -66,11 +65,13 @@
 
   .site-list__item-link {
     .set-font(@font-regular, 20px, 25px, 400);
-    color: #ffffff;
+
+    .site-list--index & {
+      color: #ffffff;
+    }
   }
 
-  .site-list__item--active .site-list__item-link {
-    padding-bottom: 5px;
+  .site-list--index .site-list__item--active {
     border-bottom: 2px solid #ffffff;
   }
 }
