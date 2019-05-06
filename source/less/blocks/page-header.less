@@ -24,6 +24,11 @@
   }
 }
 
+.page-header__logo-img {
+  width: 191px;
+  height: 39px;
+}
+
 @media (min-width: @tablet-width) {
   .page-header {
     width: @tablet-width - 2 * @tablet-side-paddings;
@@ -40,13 +45,15 @@
     padding-top: 24px;
     flex-shrink: 0;
   }
+
+  .page-header__logo-img {
+    width: 174px;
+    height: 59px;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .page-header {
-    // width: @desktop-width - 2 * @desktop-side-paddings;
-    // padding: 53px @desktop-side-paddings 0;
-    // margin-bottom: 24px;
     width: 100%;
     .reset-margin-padding();
     justify-content: flex-start;

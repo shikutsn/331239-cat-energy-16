@@ -28,30 +28,26 @@
     border-radius: 50%;
   }
 
-  &--slim {
-    &::after {
-      content: "";
-      position: absolute;
-      width: 36px;
-      height: 49px;
-      left: 30px;
-      top: 22px;
-      background-image: url("../img/icon-cat-slim.svg");
-      background-repeat: no-repeat;
-    }
+  &--slim::after {
+    content: "";
+    position: absolute;
+    width: 36px;
+    height: 49px;
+    left: 30px;
+    top: 22px;
+    background-image: url("../img/icon-cat-slim.svg");
+    background-repeat: no-repeat;
   }
 
-  &--pro {
-    &::after {
-      content: "";
-      position: absolute;
-      width: 67px;
-      height: 28px;
-      left: 13px;
-      top: 35px;
-      background-image: url("../img/icon-cat-pro.svg");
-      background-repeat: no-repeat;
-    }
+  &--pro::after {
+    content: "";
+    position: absolute;
+    width: 67px;
+    height: 28px;
+    left: 13px;
+    top: 35px;
+    background-image: url("../img/icon-cat-pro.svg");
+    background-repeat: no-repeat;
   }
 }
 

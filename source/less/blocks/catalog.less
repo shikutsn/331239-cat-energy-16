@@ -1,10 +1,11 @@
 .catalog {
   background-color: #ffffff;
+  width: @mobile-width;
+  margin: 0 auto;
 }
 
 .catalog-list {
   width: @mobile-width;
-  // border-top: 1px solid #e6e6e6;
   list-style: none;
   .reset-margin-padding();
 }
@@ -12,10 +13,8 @@
 .catalog-list__item {
   padding: 1px 20px 0;
   border: 1px solid #e6e6e6;
-  // border: 1px solid purple;
   border-bottom: none;
   box-sizing: border-box;
-  // border-top: none;
 
   &:last-child {
     border-bottom: 1px solid #e6e6e6;
@@ -26,7 +25,7 @@
   .catalog {
     width: @tablet-width;
     padding: 0 @tablet-side-paddings;
-    margin: 0 auto;
+    // margin: 0 auto;
     box-sizing: border-box;
   }
 

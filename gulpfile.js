@@ -16,6 +16,7 @@ var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
 var del = require("del");
 var cheerio = require("gulp-cheerio");
+var uglifyjs = require("gulp-uglify");
 
 // добавить минификацию html и js
 
@@ -46,6 +47,7 @@ gulp.task("server", function () {
   });
 
   gulp.watch("source/less/**/*.less", gulp.series("css"));
+  gulp.watch("source/js/**/*.js", gulp.series("uglifyjs"));
   gulp.watch("source/img/icon-*.svg", gulp.series("sprite", "html", "refresh"));
   gulp.watch("source/*.html", gulp.series("html", "refresh"));
 });
@@ -96,12 +98,21 @@ gulp.task("html", function () {
   .pipe(gulp.dest("build"));
 });
 
+gulp.task("uglifyjs", function () {
+  return gulp.src("source/js/*.js")
+  .pipe(uglifyjs())
+  .pipe(rename(function (path) {
+    path.extname = ".min.js";
+  }))
+  .pipe(gulp.dest("build/js"));
+});
+
 gulp.task("copy", function () {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
     "source/img/**",
     // "!source/img/icon-*.svg",
-    "source/js/**",
+    // "source/js/**",
     "source/*.ico",
     "source/*.html"
   ], {
@@ -118,6 +129,7 @@ gulp.task("build", gulp.series(
   "clean",
   "copy",
   "css",
+  "uglifyjs",
   "sprite",
   "html"
 ));

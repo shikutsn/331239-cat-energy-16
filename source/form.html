@@ -7,10 +7,10 @@
     <meta name="format-detection" content="telephone=no">
     <link rel="preload" href="fonts/oswaldregular.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" crossorigin="anonymous">
-
     <link href="css/style.min.css" rel="stylesheet">
+    <script src="js/picturefill.min.js" async></script>
   </head>
-  <body>
+  <body onload="formInit()">
 
     <div style="display:none">
       <include src="build/img/sprite.svg"></include>
@@ -91,14 +91,14 @@
             <div class="selection-form__contacts-wrapper">
               <p class="selection-form__item selection-form__item--email">
                 <label for="owner-email">E-mail:*</label>
-                <input class="selection-form__input selection-form__input--email" type="text" id="owner-email" name="owner-email" value="" placeholder="kuklachev@gmail.com">
+                <input class="selection-form__input selection-form__input--email" type="email" id="owner-email" name="owner-email" value="" placeholder="kuklachev@gmail.com">
                 <svg class="selection-form__icon-email" role="img" width="18" height="14">
                   <use xlink:href="#icon-mail"></use>
                 </svg>
               </p>
               <p class="selection-form__item selection-form__item--phone">
                 <label for="owner-phone">Телефон:*</label>
-                <input class="selection-form__input selection-form__input--phone" type="text" id="owner-phone" name="owner-phone" value="" placeholder="8 (960) 900-60-90">
+                <input class="selection-form__input selection-form__input--phone" type="tel" id="owner-phone" name="owner-phone" value="" placeholder="8 (960) 900-60-90">
                 <svg class="selection-form__icon-phone" role="img" width="21" height="21">
                   <use xlink:href="#icon-phone"></use>
                 </svg>
@@ -107,8 +107,8 @@
           </fieldset>
 
           <fieldset class="selection-form__comments">
+            <legend class="selection-form__comments-caption">Комментарий</legend>
             <div class="selection-form__comments-wrapper">
-              <legend class="selection-form__comments-caption">Комментарий</legend>
               <label class="visually-hidden" for="comments">Поле для ввода комментариев</label>
               <textarea class="selection-form__comments-field" id="comments" name="comments" cols="40" placeholder="Расскажите обо всех повадках кота"></textarea>
             </div>
@@ -220,5 +220,6 @@
 
     </footer>
 
+  <script src="js/scripts.min.js"></script>
   </body>
 </html>

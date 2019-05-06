@@ -107,11 +107,21 @@
 .proof__controls-before {
   .set-font(@font-regular, 16px, 20px, 400);
   text-transform: uppercase;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0;
+  position: relative;
 }
 
 .proof__controls-after {
   .set-font(@font-regular, 16px, 20px, 400);
   text-transform: uppercase;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0;
+  position: relative;
 }
 
 .proof__controls-slider {
@@ -202,7 +212,6 @@
 
   .proof__picture-wrapper {
     background-color: #f2f2f2;
-    // background-color: purple;
     width: 100%;
     .reset-margin-padding();
     position: relative;
@@ -229,14 +238,48 @@
 
   .proof__controls-before {
     .set-font(@font-regular, 20px, 20px, 400);
-    padding-bottom: 6px;
-    border-bottom: 1px dotted #b8b8b8;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      left: 0;
+      bottom: -6px;
+      box-sizing: border-box;
+      border-bottom: 1px dotted #b8b8b8;
+    }
+
+    &:hover::after, &:focus::after {
+      border-bottom: 1px solid #b8b8b8;
+    }
+
+    &:active::after {
+      border: none;
+    }
   }
 
   .proof__controls-after {
     .set-font(@font-regular, 20px, 20px, 400);
-    padding-bottom: 6px;
-    border-bottom: 1px dotted #b8b8b8;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      left: 0;
+      bottom: -6px;
+      box-sizing: border-box;
+      border-bottom: 1px dotted #b8b8b8;
+    }
+
+    &:hover::after, &:focus::after {
+      border-bottom: 1px solid #b8b8b8;
+    }
+
+    &:active::after {
+      border: none;
+    }
   }
 
   .proof__controls-slider {
@@ -257,6 +300,16 @@
       border-radius: 50%;
       box-sizing: border-box;
       border: 1px solid #cdcdcd;
+      box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.15);
+    }
+
+    &:hover::before, &:focus::before {
+      box-shadow: 0px 3px 5px 0 rgba(0, 0, 0, 0.25);
+    }
+
+    &:active::before {
+      box-shadow: 0px 4px 5px 0 rgba(0, 0, 0, 0.3);
+      border: 2px solid #68b738;
     }
 
     &::after {

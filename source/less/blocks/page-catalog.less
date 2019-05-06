@@ -1,37 +1,27 @@
 .page-catalog {
-  width: @mobile-width;
-  margin: 0 auto;
+  .reset-margin-padding();
 }
 
 .page-catalog__caption {
   .set-font(@font-regular, 36px, 36px, 400);
   color: #111111;
   padding: 28px 0 40px 20px;
-  margin: 0;
+  margin: 0 auto;
+  width: @mobile-width;
+  box-sizing: border-box;
 }
 
 @media (min-width: @tablet-width) {
-  .page-catalog {
-    width: 100%;
-    padding: 0;
-  }
-
   .page-catalog__caption {
     .set-font(@font-regular, 60px, 60px, 400);
     padding: 35px 0 165px 30px;
-    margin: 0 auto;
     width: @tablet-width;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .page-catalog {
-    width: 100%;
-    padding: 0;
-  }
-
   .page-catalog__caption {
-    padding: 69px 0 167px 81px;
+    padding: 69px 0 167px 40px;
     width: @desktop-width;
   }
 }
