@@ -5,9 +5,9 @@ var submitButton = document.querySelector(".selection-form__submit-button");
 
 var selectionForm = document.querySelector(".selection-form");
 var nameField = selectionForm.querySelector(".selection-form__input--name");
-// var nameField = writeusWindow.querySelector("[name=name]");
-// var emailField = writeusWindow.querySelector("[name=email]");
-// var letterField = writeusWindow.querySelector("[name=letter]");
+var weightField = selectionForm.querySelector(".selection-form__input--weight");
+var emailField = selectionForm.querySelector(".selection-form__input--email");
+var phoneField = selectionForm.querySelector(".selection-form__input--phone");
 
 // var isStorageSupported = true;
 // var storagedName = "";
@@ -45,25 +45,23 @@ function formInit () {
 // });
 
 selectionForm.addEventListener("submit", function (evt) {
-  if (!nameField.value || !emailField.value || !letterField.value) {
+  if (!nameField.value || !weightField.value || !emailField.value || !phoneField.value) {
     evt.preventDefault();
-    writeusWindow.classList.remove("modal-error");
-    void writeusWindow.offsetWidth;
-    writeusWindow.classList.add("modal-error");
+    // writeusWindow.classList.remove("modal-error");
+    // void writeusWindow.offsetWidth;
+    // writeusWindow.classList.add("modal-error");
     //навешиваем класс с ошибкой на поле (подкрашивание красным)
     if (!nameField.value) {
       nameField.classList.add("modal-invalid-field");
     }
+    if (!weightField.value) {
+      weightField.classList.add("modal-invalid-field");
+    }
     if (!emailField.value) {
       emailField.classList.add("modal-invalid-field");
     }
-    if (!letterField.value) {
-      letterField.classList.add("modal-invalid-field");
-    }
-  } else {
-    if (isStorageSupported) {
-      localStorage.setItem("name", nameField.value);
-      localStorage.setItem("email", emailField.value);
+    if (!phoneField.value) {
+      phoneField.classList.add("modal-invalid-field");
     }
   }
 });
