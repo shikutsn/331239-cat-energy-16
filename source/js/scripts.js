@@ -1,105 +1,62 @@
-var submitButton = document.querySelector(".selection-form__submit-button");
-
-// var writeusWindow = document.querySelector(".modal-writeus");
-// var writeusClose = writeusWindow.querySelector(".modal-close");
-
 var selectionForm = document.querySelector(".selection-form");
+var submitButton = selectionForm.querySelector(".selection-form__submit-button");
 var nameField = selectionForm.querySelector(".selection-form__input--name");
 var weightField = selectionForm.querySelector(".selection-form__input--weight");
 var emailField = selectionForm.querySelector(".selection-form__input--email");
 var phoneField = selectionForm.querySelector(".selection-form__input--phone");
 
-// var isStorageSupported = true;
-// var storagedName = "";
-// var storagedEmail = "";
-
-// try {
-//   storagedName = localStorage.getItem("name");
-//   storagedEmail = localStorage.getItem("email");
-// } catch (err) {
-//   isStorageSupported = false;
-// }
-
 function formInit () {
   nameField.focus();
 }
 
-// writeusButton.addEventListener("click", function (evt) {
-//   evt.preventDefault();
-//   writeusWindow.classList.add("modal-show");
-
-//   if (storagedName) {
-//     nameField.value = storagedName;
-//   }
-//   if (storagedEmail) {
-//     emailField.value = storagedEmail;
-//   }
-
-//   if (storagedName && storagedEmail) {
-//     letterField.focus();
-//   } else if (storagedName) {
-//     emailField.focus();
-//   } else {
-//     nameField.focus();
-//   }
-// });
-
 selectionForm.addEventListener("submit", function (evt) {
   if (!nameField.value || !weightField.value || !emailField.value || !phoneField.value) {
     evt.preventDefault();
-    // writeusWindow.classList.remove("modal-error");
-    // void writeusWindow.offsetWidth;
-    // writeusWindow.classList.add("modal-error");
-    //навешиваем класс с ошибкой на поле (подкрашивание красным)
-    if (!nameField.value) {
-      nameField.classList.add("modal-invalid-field");
-    }
-    if (!weightField.value) {
-      weightField.classList.add("modal-invalid-field");
+    // навешиваем класс с ошибкой на поле (подкрашивание красным)
+    // поля, начиная с последнего, чтобы фокус остался на первом
+    // поле с ошибкой
+    if (!phoneField.value) {
+      phoneField.classList.add("selection-form__input--error");
+      // phoneField.focus();
     }
     if (!emailField.value) {
-      emailField.classList.add("modal-invalid-field");
+      emailField.classList.add("selection-form__input--error");
+      // emailField.focus();
     }
-    if (!phoneField.value) {
-      phoneField.classList.add("modal-invalid-field");
+    if (!weightField.value) {
+      weightField.classList.add("selection-form__input--error");
+      // weightField.focus();
+    }
+    if (!nameField.value) {
+      nameField.classList.add("selection-form__input--error");
+      // nameField.focus();
     }
   }
 });
 
 // если значение в поле поменялось и было подсвечено красным - убираем
 nameField.addEventListener("input", function (evt) {
-  if (nameField.classList.contains("modal-invalid-field")) {
-    nameField.classList.remove("modal-invalid-field");
+  if (nameField.classList.contains("selection-form__input--error")) {
+    nameField.classList.remove("selection-form__input--error");
+  }
+});
+
+weightField.addEventListener("input", function (evt) {
+  if (weightField.classList.contains("selection-form__input--error")) {
+    weightField.classList.remove("selection-form__input--error");
   }
 });
 
 emailField.addEventListener("input", function (evt) {
-  if (emailField.classList.contains("modal-invalid-field")) {
-    emailField.classList.remove("modal-invalid-field");
+  if (emailField.classList.contains("selection-form__input--error")) {
+    emailField.classList.remove("selection-form__input--error");
   }
 });
 
-letterField.addEventListener("input", function (evt) {
-  if (letterField.classList.contains("modal-invalid-field")) {
-    letterField.classList.remove("modal-invalid-field");
+phoneField.addEventListener("input", function (evt) {
+  if (phoneField.classList.contains("selection-form__input--error")) {
+    phoneField.classList.remove("selection-form__input--error");
   }
 });
 
-function closeModalWindow() {
-  if (writeusWindow.classList.contains("modal-show")) {
-    writeusWindow.classList.remove("modal-show");
-    writeusWindow.classList.remove("modal-error");
-  }
-}
 
-window.addEventListener("keydown", function (evt) {
-  if (evt.keyCode === 27) {
-    evt.preventDefault();
-    closeModalWindow();
-  }
-});
-
-writeusClose.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  closeModalWindow();
-});
