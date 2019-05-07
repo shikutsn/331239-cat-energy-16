@@ -58,5 +58,3 @@ phoneField.addEventListener("input", function (evt) {
     phoneField.classList.remove("selection-form__input--error");
   }
 });
-
-

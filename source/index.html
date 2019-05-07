@@ -8,7 +8,6 @@
     <link rel="preload" href="fonts/oswaldregular.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" crossorigin="anonymous">
     <link href="css/style.min.css" rel="stylesheet">
-    <!-- минифицировать html с помощью gulp-htmlmin -->
     <script src="js/picturefill.min.js" async></script>
   </head>
   <body>
@@ -130,10 +129,8 @@
               <img class="proof__picture" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" width="320" height="240" alt="Фотография кота до диеты">
             </picture>
             <div class="proof__controls">
-              <!-- <span class="proof__controls-before" tabindex="1">Было</span> -->
               <button class="proof__controls-before">Было</button>
-              <div class="proof__controls-slider" tabindex="1"></div>
-              <!-- <span class="proof__controls-after" tabindex="3">Стало</span> -->
+              <div class="proof__controls-slider" tabindex="0"></div>
               <button class="proof__controls-after">Стало</button>
             </div>
           </div>
@@ -145,8 +142,8 @@
     <footer class="page-footer">
 
       <div class="page-footer__contacts-wrapper-index">
+        <h2 class="visually-hidden">Контакты</h2>
         <div class="page-footer__contacts">
-          <h2 class="visually-hidden">Контакты</h2>
           <p class="page-footer__contacts-tagline">
             <span>Приглашаем</span>
             <span>к сотрудничеству дилеров!</span>
@@ -160,10 +157,6 @@
 
       <div class="page-footer__map-wrapper">
         <iframe class="page-footer__map-iframe" src="https://yandex.ru/map-widget/v1/-/CCRbFE1c" width="320" height="363" allowfullscreen></iframe>
-        <!-- <iframe class="page-footer__map-iframe" src="https://yandex.ru/map-widget/v1/-/CCQo5D-J" width="960" height="559"></iframe> -->
-        <!-- <iframe class="page-footer__map-iframe" src="https://yandex.ru/map-widget/v1/-/CCV06GYD" width="320" height="363" allowfullscreen></iframe> -->
-        <!-- <iframe class="page-footer__map-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5995118293922!2d30.31710032369279!3d59.938787421099896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1556829100594!5m2!1sru!2sru" width="100%" height="400"></iframe> -->
-        <!-- <iframe class="page-footer__map-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.603625300316!2d30.320858716171!3d59.93871916905408!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1551340098223"></iframe> -->
         <picture>
           <source type="image/webp" media="(min-width: 1300px)" srcset="img/webp/bg-map-desktop@1x.webp 1x, img/webp/bg-map-desktop@2x.webp 2x">
           <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/bg-map-tablet@1x.webp 1x, img/webp/bg-map-tablet@2x.webp 2x">
