@@ -74,14 +74,16 @@
     outline: 1px solid rgba(205, 205, 205, 1);
   }
 
+  &:hover + .selection-form__icon-email,
+  &:hover + .selection-form__icon-phone {
+    fill: #222222;
+  }
+
   &:focus {
     outline: 2px solid #444444;
   }
 
-  &:focus + .selection-form__icon-email {
-    fill: #68b738;
-  }
-
+  &:focus + .selection-form__icon-email,
   &:focus + .selection-form__icon-phone {
     fill: #68b738;
   }
@@ -403,7 +405,7 @@
 
   .selection-form__contacts-wrapper {
     width: @tablet-width;
-    padding: 87px 66px 0px 70px;
+    padding: 87px 66px 0 70px;
   }
 
   .selection-form__contacts-caption {
