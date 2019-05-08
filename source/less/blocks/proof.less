@@ -10,11 +10,34 @@
   padding: 0 @mobile-side-paddings;
 }
 
-.proof__picture-wrapper {
+.proof__slider-wrapper {
   box-sizing: border-box;
   width: @mobile-width;
   margin: 0 auto;
   padding: 0;
+  position: relative;
+  min-height: 337px;
+}
+
+.proof__slider-item-wrapper {
+  content: "";
+  left: 0;
+  top: 0;
+  background: linear-gradient(to right, #f2f2f2, #eaeaea);
+
+  &&--before {
+    z-index: 20;
+    position: relative;
+    overflow: hidden;
+    height: 279px;
+    width: 100%;
+  }
+
+  &&--after {
+    z-index: 10;
+    // top: -279px;
+    position: absolute;
+  }
 }
 
 .proof__caption {
@@ -93,13 +116,12 @@
 .proof__picture {
   padding-top: 14px;
   padding-bottom: 25px;
+  display: block;
 
-  &--hide {
-    display: none;
-  }
-
-  &--show {
-    display: block;
+  &--before {
+    position: absolute;
+    height: 240px;
+    max-width: none;
   }
 }
 
@@ -142,23 +164,34 @@
   border: 1px solid #cdcdcd;
   border-radius: 10px;
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 3px;
-    width: 35px;
-    height: 6px;
-    background-color: #68b738;
-    border-radius: 10px;
-  }
+  // &::before {
+  //   content: "";
+  //   position: absolute;
+  //   top: 3px;
+  //   width: 35px;
+  //   height: 6px;
+  //   background-color: #68b738;
+  //   border-radius: 10px;
+  // }
 
-  &--before::before {
-    left: 5px;
-  }
+  // &--before::before {
+  //   left: 6px;
+  // }
 
-  &--after::before {
-    left: 42px;
-  }
+  // &--after::before {
+  //   left: 43px;
+  // }
+}
+
+.proof__controls-slider-pointer {
+  content: "";
+  position: absolute;
+  top: 3px;
+  width: 35px;
+  height: 6px;
+  background-color: #68b738;
+  border-radius: 10px;
+  left: 6px;
 }
 
 @media (min-width: @tablet-width) {
@@ -225,11 +258,10 @@
     width: 130px;
   }
 
-  .proof__picture-wrapper {
+  .proof__slider-wrapper {
     background-color: #f2f2f2;
     width: 100%;
     .reset-margin-padding();
-    position: relative;
   }
 
   .proof__picture {
@@ -400,7 +432,7 @@
     padding: 72px 0 55px 0;
   }
 
-  .proof__picture-wrapper {
+  .proof__slider-wrapper {
     width: 610px;
     position: relative;
   }
