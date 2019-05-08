@@ -25,16 +25,16 @@ buttonAfter.addEventListener("click", function () {
 //   var sliderDot = sliderControl.children[1];
 // }
 
-sliderPointer.onmousedown = function(evt) {
+sliderPointer.onmousedown = function(e) {
   var thumbCoords = getCoords(sliderPointer);
-  var shiftX = evt.pageX - thumbCoords.left;
+  var shiftX = e.pageX - thumbCoords.left;
   // shiftY здесь не нужен, слайдер двигается только по горизонтали
 
   var sliderCoords = getCoords(sliderControl);
 
-  document.onmousemove = function(evt) {
+  document.onmousemove = function(e) {
     //  вычесть координату родителя, т.к. position: relative
-    var newLeft = evt.pageX - shiftX - sliderCoords.left;
+    var newLeft = e.pageX - shiftX - sliderCoords.left;
 
     // курсор ушёл вне слайдера
     if (newLeft < 6) {
@@ -55,6 +55,39 @@ sliderPointer.onmousedown = function(evt) {
 
   return false; // disable selection start (cursor change)
 };
+
+// для тача. Почему-то не работает
+// sliderPointer.ontouchstart = function(e) {
+//   var thumbCoords = getCoords(sliderPointer);
+//   var shiftX = e.pageX - thumbCoords.left;
+//   // shiftY здесь не нужен, слайдер двигается только по горизонтали
+
+//   var sliderCoords = getCoords(sliderControl);
+
+//   document.ontouchmove = function(e) {
+//     //  вычесть координату родителя, т.к. position: relative
+//     var newLeft = e.pageX - shiftX - sliderCoords.left;
+
+//     // курсор ушёл вне слайдера
+//     if (newLeft < 6) {
+//       newLeft = 6;
+//     }
+//     var rightEdge = sliderControl.offsetWidth - sliderPointer.offsetWidth;
+//     if (newLeft > rightEdge - 6) {
+//       newLeft = rightEdge - 6;
+//     }
+
+//     sliderPointer.style.left = newLeft + 'px';
+//     beforeWrapper.style.width = Math.round(100-100*(newLeft - 6)/37) + "%";
+//   }
+
+//   document.ontouchend = function() {
+//     document.ontouchstart = document.ontouchmove = null;
+//   };
+
+//   return false; // disable selection start (cursor change)
+// };
+// -----------------
 
 sliderPointer.ondragstart = function() {
   return false;
