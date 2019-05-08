@@ -19,34 +19,40 @@ buttonAfter.addEventListener("click", function () {
 // sliderControl -- slider
 // sliderPointer -- указатель слайдера для мобильных
 
-
-// и зеленый центр указателя для планшетов и выше
-// if(window.matchMedia('(min-width: 768px)').matches) {
-//   var sliderDot = sliderControl.children[1];
-// }
-
 sliderPointer.onmousedown = function(e) {
   var thumbCoords = getCoords(sliderPointer);
   var shiftX = e.pageX - thumbCoords.left;
-  // shiftY здесь не нужен, слайдер двигается только по горизонтали
 
   var sliderCoords = getCoords(sliderControl);
 
   document.onmousemove = function(e) {
-    //  вычесть координату родителя, т.к. position: relative
     var newLeft = e.pageX - shiftX - sliderCoords.left;
 
-    // курсор ушёл вне слайдера
-    if (newLeft < 6) {
-      newLeft = 6;
-    }
-    var rightEdge = sliderControl.offsetWidth - sliderPointer.offsetWidth;
-    if (newLeft > rightEdge - 6) {
-      newLeft = rightEdge - 6;
-    }
+    if (window.matchMedia('(max-width: 767px)').matches) {
+      if (newLeft < 6) {
+        newLeft = 6;
+      }
+      var rightEdge = sliderControl.offsetWidth - sliderPointer.offsetWidth;
+      if (newLeft > rightEdge - 6) {
+        newLeft = rightEdge - 6;
+      }
 
-    sliderPointer.style.left = newLeft + 'px';
-    beforeWrapper.style.width = Math.round(100-100*(newLeft - 6)/37) + "%";
+      sliderPointer.style.left = newLeft + 'px';
+
+      beforeWrapper.style.width = Math.round(100 - 100 * (newLeft - 6) / 37) + "%";
+    } else if (window.matchMedia('(min-width: 768px)').matches) {
+      if (newLeft < -15) {
+        newLeft = -15;
+      }
+      var rightEdge = sliderControl.offsetWidth - sliderPointer.offsetWidth;
+      if (newLeft > rightEdge + 15) {
+        newLeft = rightEdge + 15;
+      }
+
+      sliderPointer.style.left = newLeft + 'px';
+
+      beforeWrapper.style.width = Math.round(100 - 100 * (newLeft + 15) / 424) + "%";
+    }
   }
 
   document.onmouseup = function() {
