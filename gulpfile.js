@@ -18,8 +18,6 @@ var del = require("del");
 var cheerio = require("gulp-cheerio");
 var uglifyjs = require("gulp-uglify");
 
-// добавить минификацию html
-
 gulp.task("css", function () {
   return gulp.src("source/less/style.less")
     .pipe(plumber())
