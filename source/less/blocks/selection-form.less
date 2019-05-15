@@ -135,6 +135,9 @@
 .selection-form__radio:hover + .selection-form__radio-label::before,
 .selection-form__radio:focus + .selection-form__radio-label::before {
   border: 1px solid #bababa;
+  // border: 1px solid #4d90fe;
+  // outline: none;
+  // box-shadow: 0 0 5px #4d90fe;
 }
 
 .selection-form__radio:active + .selection-form__radio-label {
@@ -172,14 +175,14 @@
 .selection-form__icon-email {
   position: absolute;
   top: 16px;
-  right: 15px;
+  right: 18px;
   fill: #222222;
 }
 
 .selection-form__icon-phone {
   position: absolute;
   top: 13px;
-  right: 12px;
+  right: 15px;
   fill: #222222;
 }
 
@@ -512,6 +515,10 @@
 }
 
 @media (min-width: @desktop-width) {
+  .selection-form {
+    margin-bottom: 80px;
+  }
+
   .selection-form__general-wrapper {
     width: @desktop-width;
     padding: 0 @desktop-side-paddings;
